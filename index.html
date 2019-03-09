@@ -72,6 +72,29 @@
 .use-motion .logo-line-after i {
 	right: initial
 }
+#message{
+			
+            display: block;
+            width: 1000px;
+            height: 40px;
+            /*渐变背景*/
+            background-image: -webkit-linear-gradient(left, #3498db, #f47920 10%, #d71345 20%, #f7acbc 30%,
+            #ffd400 40%, #3498db 50%, #f47920 60%, #d71345 70%, #f7acbc 80%, #ffd400 90%, #3498db);
+            color: transparent; /*文字填充色为透明*/
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景*/
+            background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+            /* 动画 */
+            animation: masked-animation 4s infinite linear;
+        }
+        @keyframes masked-animation {
+            0% {
+                background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+            }
+            100% {
+                background-position: -100% 0;
+            }
+        }
 </style>
 </noscript>
 </head>
@@ -165,7 +188,7 @@
 									itemtype="http://schema.org/Organization"><meta
 										itemprop="name" content="黑果小兵的部落阁"></span>
 								<header class="post-header">
-									<h1 class="post-title" itemprop="name headline">
+									<h1 class="post-title" itemprop="name headline" id="message">
 										<a
 											href="/TestOne.html"
 											class="post-title-link"
