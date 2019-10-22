@@ -1,570 +1,1300 @@
-<!DOCTYPE html>
-<!-- saved from url=(0036)http://www.hdsyfz.bjedu.cn/index.php -->
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0029)http://www.shuichuliyaoji.cn/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
 
-<title>å”å±±å¸‚æ›¹å¦ƒç”¸åŒºä¸­æ’é«˜çº§ä¸­å­¦</title>
-<!-- é€šç”¨JS -->
-<script type="text/javascript"
-	src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/jquery-1.9.0.min.js"></script>
-<script type="text/javascript" src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/script.js"></script>
-<script src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/responsiveslides.min.js"></script>
-<link rel="stylesheet" href="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/style.css">
-<!--[if lt IE 9]>
-	<script src="js/html5.js"  type="text/javascript"></script>
-	<![endif]-->
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+		<title>Ìì½òĞÂÁ¦º½¿Æ¼¼ÓĞÏŞ¹«Ë¾</title>
+		<meta name="keywords" content="×è¹¸¼Á,·´ÉøÍ¸×è¹¸¼Á,Ë®´¦ÀíÒ©¼Á£¬»ºÊ´×è¹¸¼Á">
+			<meta name="description"
+				content="°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾×ÔÖ÷ÑĞ·¢¸ßĞ§×¨ÓÃ×è¹¸¼Á¡¢·´ÉøÍ¸×è¹¸¼Á¡¢»ºÊ´×è¹¸¼ÁµÈ²úÆ·£¬Ë®´¦ÀíÒ©¼ÁÖÖÀà·±¶à£¬¸ßĞ§½ÚÄÜ£¬ÂÌÉ«»·±£¡£">
+				<link
+					href="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/resetcommonindex.css"
+					rel="stylesheet" type="text/css">
+					<script src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/hm.js.ÏÂÔØ"></script>
+
+					<script type="text/javascript"
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/NSW_Index.js.ÏÂÔØ"></script>
+					<script src="js/jquery-2.2.3.js"></script>
+					<script>
+						$(document).ready(function() {
+							//»ñÈ¡nav¾àÀë¶¥²¿µÄ¾àÀë
+							var navtop = $("#nav").offset().top;
+							$(document).scroll(function() {
+								//»ñÈ¡¹ö¶¯Ìõ¹ö¶¯µÄ¸ß¶È
+								var scroltop = $(document).scrollTop();
+								if (scroltop > navtop) {
+									$("#nav").css({
+										"position" : "fixed",
+										"left" : "0px",
+										"top" : "0px",
+										"width" : "100%"
+									})
+								} else {
+									$("#nav").css({
+										"position" : "",
+										"left" : "",
+										"top" : "",
+										"width" : ""
+									})
+								}
+							})
+						})
+					</script>
+					<style type="text/css">
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#nav {
+	height: 50px;
+	width: 100%;
+	background: #50A64D;
+}
+
+#f {
+	height: 2000px;
+	width: 100%;
+	background: #50A64D;
+}
+
+.top {
+	/* ÉèÖÃ¿í¶È¸ß¶È±³¾°ÑÕÉ« */
+	height: auto; /*¸ß¶È¸ÄÎª×Ô¶¯¸ß¶È*/
+	width: 100%;
+	margin-left: 0;
+	background: rgb(67, 163, 66);
+	top: 150px; /*Àë¶¥²¿µÄ¾àÀëÎª0*/
+	margin-bottom: 15px;
+}
+
+.top ul {
+	/* Çå³ıul±êÇ©µÄÄ¬ÈÏÑùÊ½ */
+	width: auto; /*¿í¶ÈÒ²¸ÄÎª×Ô¶¯*/
+	list-style-type: none;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-left: 23.5%;
+	/* margin-top: 0;          */
+	padding: 0;
+}
+
+.top li {
+	float: left; /* Ê¹liÄÚÈİºáÏò¸¡¶¯£¬¼´ºáÏòÅÅÁĞ  */
+	margin-right: 2%; /* Á½¸öliÖ®¼äµÄ¾àÀë*/
+	position: relative;
+	overflow: hidden;
+}
+
+.top li a {
+	/* ÉèÖÃÁ´½ÓÄÚÈİÏÔÊ¾µÄ¸ñÊ½*/
+	display: block; /* °ÑÁ´½ÓÏÔÊ¾Îª¿éÔªËØ¿ÉÊ¹Õû¸öÁ´½ÓÇøÓò¿Éµã»÷ */
+	color: white;
+	text-align: center;
+	padding: 15px;
+	overflow: hidden;
+	text-decoration: none; /* È¥³ıÏÂ»®Ïß */
+}
+
+.top li a:hover {
+	/* Êó±êÑ¡ÖĞÊ±±³¾°±äÎªºÚÉ« */
+	background-color: #F9BC2D;
+}
+
+#MsnDialog.ad, #MyMoveAd, #QQ_Full, #ad-SNSSplashAd, #ad6cn, #adBody07,
+	#adLeftFloat, #adRightFloat, #ad_box1, #ad_box2, #ad_full,
+	#ad_headerbanner, #ads_c_tpc, #ads_top_video, #adtop1, #adx_cggp,
+	#crazy_ad_float, #crazy_ad_layer, #cs_left_couplet, #cs_right_couplet,
+	#doyoo_mon_mask, #doyoo_monitor, #duilian_left, #duilian_right,
+	#eis_pad1, #eis_pad2, #floatAd, #floatad-winpop, #fwin_popad_7ree,
+	#fwin_popad_7ree+#fwin_dialog, #gg300, #googleAdIndexTop, #haoetv1,
+	#js-ad-map, #js_ads_banner_top, #js_ads_banner_top_slide, #kfpopupDiv,
+	#leftCouple, #leftCouplet, #leftFloat+#rightFloat, #left_couple,
+	#left_down_float_ad, #left_float+#right_float, #left_top_ad,
+	#left_up_float_ad, #lovexin1, #lovexin11, #lovexin12, #lovexin13,
+	#lovexin14 {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+
+#lovexin2, #mbjx_ad, #miaov_float_layer, #micast_ads, #movieInfoRight,
+	#my-adsFPR, #navcontainer+.moneyarea, #netease_mail_footer, #olfullad,
+	#overture_ads_bottom_td, #overture_ads_top_td, #popup.t, #ptcmsad1,
+	#qj960a, #qj960b, #results.content-main>.eLeft, #rightCouple,
+	#rightCouple+#leftFloat, #rightCouplet, #rightCouplet+#leftFloat,
+	#right_couple, #right_couple+#left_float, #right_down_float_ad,
+	#right_up_float_ad, #shareman_ad, #sitefocus.focus, #snActive-wrap,
+	#table1[width="468"][height="50"], #table1[width="794"][height="60"],
+	#table1[width="812"][height="50"], #tanx-con-1, #tanx-fold-main,
+	#textggs, #top_ads0, #toperAd2, #toptb+div[align="center"], #tr_ad1,
+	#tr_ad10, #tr_ad11, #tr_ad2, #tr_ad3, #tr_ad4, #tr_ad5, #tr_ad6,
+	#tr_ad7, #tr_ad8, #tr_ad9, #tripadvisor-ad, #xinnxi, #xinxi {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+
+#zds_ad, ._cggp, ._ggs, ._popIn_recommend_article_ad,
+	._popIn_recommend_article_ad_reserved, .a_cn, .a_fl, .a_pb, .a_pr,
+	.a_sxc, .a_xsfl, .ad-above-footer, .ad-below-adjacent-post,
+	.ad-below-header-menu, .ad-below-post-title, .ad-below-related-post,
+	.ad-couplet-common, .ad-left-down, .ad-left-top, .ad-right-down,
+	.ad-right-top, .ad-site, .ad250left, .ad250right, .ad300left,
+	.ad336left, .ad990x130, .ad990x90, .ad_couplebanner, .ad_fixed,
+	.ad_footerbanner, .ad_headerbanner, .ad_hf, .ad_home_current, .ad_midd,
+	.ad_right_1, .ad_right_2, .ad_thread, .ads>a>img[src*=".sinaimg."],
+	.adsense160, .adsense200, .adsoho, .assort-ad, .banner-ad-section,
+	.bdyp-sygg-ul, .below_ads, .bm.a_c, .bn728-93, .bottom-adv,
+	.bottomSponsor {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+
+.bus_adsbox, .cari-ads, .chat-ad, .chat-right-ad, .chat-sysbroadcast-ad,
+	.chat-top-ad, .comiis_adbox, .con_ad, .content-video>.ads,
+	.content-video>.ads-player, .content_ad_300, .couplet_9cb0d,
+	.customSlideshow-ad-below, .d_slidebanner, .f-sign-cont[data-dysign-adid],
+	.gg1000, .gg430, .gg_300, .gg_950, .gg_960, .gg_full, .ggad, .ggdistich,
+	.gggtop, .ggpost-below, .ggtop, .google_adsense2, .gpt_ads_box,
+	.hao123-unionad-pic, .heg>.div-list, .his-sign-cont[data-dysign-adid],
+	.iHead960x90, .index_alert_gg, .indexad2, .indexad3, .indexad4,
+	.it618_firstad_flex, .kf_qycn_com_cckf_welcomebox, .leftadv, .lol-ad,
+	.lol_ad, .lyzm-prevent, .menutab_ad, .ml_ad1, .ml_ad3, .ml_ad5, .mlad,
+	.movie-advert-link, .pagead_3, .player-bottom-gg {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+
+.readerAd, .room-ad-bottom, .room-ad-top, .room-ad-video-down,
+	.scupioadslot, .sxAdBox, .theme_custom_slidebox-ad-below, .tipadds,
+	.tmall_ad_container, .top-read-ad, .topSponsor, .toy52_outer,
+	.toy52apparel_ALL, .twavt-ads, .wf_ad_block, .widget_ad_sidebar,
+	.widget_adbox, .wp.a_f, .wp.a_h, .wumii-bottom-popup, .wumii-widget-ad,
+	.wzad, .yd_ad, .yd_ad1, .yd_ad2, .yd_ad3, .yd_ad5, .yd_ad6,
+	.zone_wap_banner2, A[href*=".com/?Agent="], a[href*=".123ch.cn"], a[href*=".222bz.com/"],
+	a[href*=".9xiazaiqi.com"], a[href*=".com/?Extend="], a[href*=".com/?p="][target="_blank"]>img[src$=".gif"],
+	a[href*=".com/Register.aspx?aid="], a[href*=".com/Register/?a="], a[href*=".com/Register?a="],
+	a[href*=".com?aff="], a[href*=".com?intr="], a[href*=".downok.com"], a[href*=".qpzqxz.com/"],
+	a[href*=".qtj5.com/"], a[href*=".tudown.com/"], a[href*=".wjLkj.com/"],
+	a[href*=".yyk2.com/"], a[href*="/?INTR="], a[href*="/?Intr="], a[href*="/?intr="],
+	a[href^="http://ad.moemoe."] {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+
+a[href^="http://go.gotourl.xyz/"], a[href^="http://www.upupoo.com/?"], a[href^="https://hi.potvpn.com/?from="],
+	body[onload*="u()"]>#x, div#ad_id, div[id^="ad_thread"], img[src$="/2016-0114-700X70.gif"] 
+	 ~ a[onmouseover="this.style.background='#DEF5CD';"]:nth-child(-n+226),
+	img[src$="/2016-0114-700X70.gif"] ~ span[class^="f"]>span>a[onmouseover="this.style.background='#DEF5CD';"]:first-child:last-child,
+	img[src$="/47650fdad90b35b07d9339b792713f7e.gif"] ~ a[onmouseover="this.style.background='#DEF5CD';"]:nth-child(-n+226),
+	img[src$="/47650fdad90b35b07d9339b792713f7e.gif"] ~ span[class^="f"]>span>a[onmouseover="this.style.background='#DEF5CD';"]:first-child:last-child,
+	img[src$="/a1b45005bda18472821222856c6d4f99.gif"] ~ a[onmouseover="this.style.background='#DEF5CD';"]:nth-child(-n+226),
+	img[src$="/a1b45005bda18472821222856c6d4f99.gif"] ~ span[class^="f"]>span>a[onmouseover="this.style.background='#DEF5CD';"]:first-child:last-child,
+	script+#rbbox, script+.sptable[cellpadding="5"], script+.sptable_do_not_remove[cellpadding="5"],
+	table[style="border:#e8e8e8 1px solid;"]+div[style="margin-top:5px"]>table[style="width:100%;"][cellspacing="0"][cellpadding="1"][bordercolor="#999999"][border="1"],
+	[style="display:none"]+iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div:not ([id] ):not ([class] ):not ([style] ) >div:not ([id] ):not ([class]
+	 ):not ([style] ) >iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="display: block;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="margin: 0px;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="opacity: 100;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="overflow: hidden;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="visibility: visible;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"][style$="z-index: inherit;"] iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	#cpro_container, a[href*="/mobads.php?"], div[id][style="width: 100%;"]>div>div>iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[id][style="width: 100%;"]>div>iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[id][style="width: 100%;"]>iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style="width: 100%;"]:not ([id] ):not ([class] ) >iframe[scrolling="no"][src*="//"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	div[style^="width: 100%;"]:not ([id] ):not ([class] ) >iframe[scrolling="no"][src^="http"][src*="?"][src*="="][src*="&"][width][height][frameborder="0"],
+	.footer>#box[style="width:100%;height:100%;position:fixed;top:0"], a[href^="http://yunbofangbt."],
+	#j-new-ad, .a_sxfl, .a_sxmu, .a_sxp, .a_sxpb, .heg>.partner-list, a[href^="/dasp.php?a="],
+	[class^="ADTOPLB"] {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+</style>
+					<style type="text/css">
+.adsbygoogle, .ggbox, .banner-site, .a_p, .a_fr, a[href*="/cpro/"], a[href*="/cpro."],
+	a[href*="/?aff="], a[href*=".umeng.com"], a>img[width="980"][src*=".sinaimg."],
+	a>img[width="960"][src*=".sinaimg."], a>img[src*=".sinaimg."][src$=".gif"][style*="width:960"],
+	.wp.a_t, .widget_ui_ads, .baiduad, .a_pt, .a_mu, #kfivtwin, #haoetv,
+	#gg1 {
+	display: none !important;
+	z-index: -1 !important;
+	height: 0px !important;
+}
+</style>
+					<style type="text/css" abt="234"></style>
+
+					<script charset="utf-8"
+						src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/btype.js"></script>
+					<script type="text/javascript" charset="utf-8"
+						src="chrome-extension://jgphnjokjhjlcnnajmfjlacjnjkhleah/js/chrome.js"></script>
+					<style id="a04a866c-c413-4244-be97-d19339b0d549">
+.pb-toast-main {
+	z-index: 2147483639 !important;
+	position: fixed !important;
+	top: -50px !important;
+	left: 0px !important;
+	width: 100% !important;
+	height: 44px !important;
+	border: none !important;
+	box-shadow: 0 1px 0 0 #b6b4b6 !important;
+	transition: top 0.3s;
+}
+
+.pb-toast-main-move {
+	top: 0px !important;
+}
+
+.pb-toast-main-show {
+	transition: none;
+	top: 0px !important;
+}
+
+#pb_jq_tipsWrapper {
+	position: fixed !important;
+	width: 230px !important;
+	background-color: rgba(0, 0, 0, 0.8);
+	box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.2);
+	font-family: "Lucida Grande", tahoma, verdana, arial,
+		sans-serif !important;
+	border-radius: 5px !important;
+	color: #ffffff !important;
+	z-index: 2147483641 !important;
+	padding: 15px !important;
+	font-size: 14px !important;
+}
+
+#pb_jq_tipsWrapper:before {
+	position: absolute !important;
+	top: -10px !important;
+	right: 60px !important;
+	display: inline-block !important;
+	border-right: 10px solid transparent !important;
+	border-bottom: 10px solid #000 !important;
+	border-left: 10px solid transparent !important;
+	border-bottom-color: rgba(0, 0, 0, 0.2) !important;
+	content: '' !important;
+}
+
+#pb_jq_tipsWrapper:after {
+	position: absolute !important;
+	top: -9px !important;
+	right: 60px !important;
+	display: inline-block !important;
+	border-right: 9px solid transparent !important;
+	border-bottom: 9px solid #000 !important;
+	border-left: 9px solid transparent !important;
+	content: '' !important;
+}
+
+#pb-link-copied-message {
+	display: none;
+	position: fixed;
+	width: 90px;
+	height: 29px;
+	opacity: 0;
+	border-radius: 100px;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 2147483641;
+	font-family: "Lucida Grande", tahoma, verdana, arial,
+		sans-serif !important;
+	font-size: 13px;
+	line-height: 29px;
+	text-align: center;
+	color: #ffffff;
+}
+}
+</style>
 </head>
-<body style="zoom: 1;">
-	<div id="wrapper">
-		<!--headerå¼€å§‹-->
-		<header class="header">
-			<div class="topWrap" style="display: block;">
-				<ul class="top_rt">
-					<li class="search"><a href="javascript:void(0);"><img
-							src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/search.png" alt="" class="sr"></a>
-						<div class="sr_box">
-							<input type="text" name="keywords" placeholder="æœç´¢â€¦â€¦"> <a
-								class="search2" href="javascript:;">go</a>
-						</div></li>
-					<li><a href="http://www.hdsyfz.bjedu.cn/login.php"
-						target="_blank"><strong>ç™»å½•</strong></a></li>
-					<li><a href="http://www.hdsyfz.bjedu.cn/index.php">é¦–é¡µ</a></li>
-				</ul>
+<body>
+	<!--Ê×Ò³Í·²¿-->
+
+
+	<!--Í·²¿ ¿ªÊ¼-->
+	<div class="hdWrap">
+		<div class="header">
+			<div class="hd_top">
+				<p class="fr">
+					<a id="weixin" href="javascript:void(0)">Î¢ĞÅ¹Ø×¢<img
+						class="two-code" src="./images/weixin_logo.jpg" width="100"
+						height="100" alt=""></a>
+				</p>
+				<span class="fl">»¶Ó­ÄúÀ´µ½Ìì½òĞÂÁ¦º½¿Æ¼¼ÓĞÏŞ¹«Ë¾£¡</span>
 			</div>
-			<script>
-				$(function() {
-					$('.search2')
-							.click(
-									function() {
-										var keywords = $(
-												"input[name='keywords']").val();
-										var keywords = $.trim(keywords);
-										if (keywords == '') {
-											alert('æœç´¢å†…å®¹ä¸èƒ½ä¸ºç©ºï¼');
-											return false;
-										}
-										window.location.href = '/?a=web.search&uid=1&keywords='
-												+ keywords;
-									});
-					$('input[name=keywords]')
-							.keyup(
-									function(evt) {
-										if (evt.keyCode == 13) {
-											var keywords = $(
-													"input[name='keywords']")
-													.val();
-											var keywords = $.trim(keywords);
-											if (keywords == '') {
-												alert('æœç´¢å†…å®¹ä¸èƒ½ä¸ºç©ºï¼');
-												return false;
-											}
-											window.location.href = '/?a=web.search&uid=1&keywords='
-													+ keywords;
-										}
-									});
-				});
-			</script>
-			<div class="nav-wrapper">
-
-				<!--			    ------------------------------------------å¤´éƒ¨logo--------------------------------------------->
-				<div class="navMain">
-					<div class="header-logo">
-						<div>
-							<a href="http://www.hdsyfz.bjedu.cn/index.php"><img
-								src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/152239502902959.png" alt="Logo"></a>
-						</div>
-					</div>
-
-
-					<!--				//------------------------------------------å¯¼èˆª-------------------------------------------//-->
-					<div class="nav" id="nav">
-						<ul class="left">
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=1">å­¦æ ¡æ¦‚å†µ</a>
-								<div class="subNav" style="width: 94px;">
-									<dl>
-
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=1">å­¦æ ¡æ–°é—»</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;uid=1&amp;id=13">å­¦æ ¡ç®€ä»‹</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;uid=1&amp;id=33">ç»„ç»‡æœºæ„</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;uid=1&amp;id=36">ç®¡ç†å›¢é˜Ÿ</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;uid=1&amp;id=34">å­¦æ ¡è£èª‰</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=48">æ ¡å›­æ–‡åŒ–</a>
-										</dd>
-									</dl>
-								</div></li>
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=6">è¯¾ç¨‹å»ºè®¾</a>
-								<div class="subNav" style="width: 94px;">
-									<dl>
-
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=8">æ ¡æœ¬è¯¾ç¨‹</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=9">åœ°æ–¹è¯¾ç¨‹</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=10">äº”å”¯è¯¾ç¨‹</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=7">å›½å®¶è¯¾ç¨‹æ ¡æœ¬åŒ–</a>
-										</dd>
-									</dl>
-								</div></li>
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=11">æ•™å­¦ç§‘ç ”</a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=12">æ•™å­¦åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=13">ç§‘ç ”åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=14">æˆæœå±•ç¤º</a>
-										</dd>
-									</dl>
-								</div></li>
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=49">æ•™è‚²å¤©åœ°</a>
-								<div class="subNav" style="width: 94px;">
-									<dl>
-
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=50">å¾·è‚²åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=51">å›¢ã€ä¼šã€é˜ŸåŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=52">å¿ƒç†å«ç”ŸåŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=53">æˆæœå±•ç¤º</a>
-										</dd>
-									</dl>
-								</div></li>
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=15">å­¦ç”Ÿå‘å±•</a>
-								<div class="subNav" style="width: 94px;">
-									<dl>
-
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=16">ä½“è‚²åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=17">è‰ºæœ¯åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=18">ç§‘æŠ€åŠ¨æ€</a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=55">æˆæœå±•ç¤º</a>
-										</dd>
-									</dl>
-								</div></li>
-						</ul>
-
-						<ul class="right">
-
-
-
-
-
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=21">æ•™å¸ˆé˜Ÿä¼</a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=22">æ•™å¸ˆé˜Ÿä¼æ¦‚å†µ</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=23">åå¸ˆé£é‡‡</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=24">æ•™å¸ˆå‘å±•</a>
-										</dd>
-									</dl>
-								</div></li>
-
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=20">å›½é™…äº¤æµ</a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=32">å‹å¥½å­¦æ ¡</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=33">äº¤æµäº’è®¿</a>
-										</dd>
-									</dl>
-								</div></li>
-
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=34">å…šå»ºä¸“æ </a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=36">å…šç»„ç»‡æ„æ¶</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=37">å…šæ€»æ”¯å§”å‘˜ä¼šæˆå‘˜</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=38">å…šå‘˜é£é‡‡</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=39">å…šå»ºåŠ¨æ€</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=40">ç†è®ºå­¦ä¹ </a>
-										</dd>
-									</dl>
-								</div></li>
-
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=41">å·¥ä¼šä¹‹å®¶</a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=42">å·¥ä¼šå§”å‘˜ä¼š</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=44">æ•™ä»£ä¼šå§”å‘˜ä¼š</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=45">æ•™ä»£ä¼šå·¥ä½œ</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=43">å·¥ä¼šæ´»åŠ¨</a>
-										</dd>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=46">é€€ä¼‘ç”Ÿæ´»</a>
-										</dd>
-									</dl>
-								</div></li>
-
-							<li class=""><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=54">æ‹›ç”Ÿä¿¡æ¯</a>
-								<div class="subNav" style="width: 94px; display: none;">
-									<dl>
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=57">æ‹›ç”Ÿä¸“æ </a>
-										</dd>
-
-										<dd>
-											<a
-												href="http://www.hdsyfz.bjedu.cn/?a=web.register.index&amp;uid=1&amp;id=7&amp;wid=61">åœ¨çº¿æŠ¥å</a>
-										</dd>
-									</dl>
-								</div></li>
-
-						</ul>
-					</div>
-				</div>
+			<div class="hd_Mid">
+				<h1 class="hd_logo fl">
+					<a href="http://www.shuichuliyaoji.cn/" title="Ë®´¦ÀíÒ©¼Á¹«Ë¾"> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/logoo.png"
+						alt="Ë®´¦ÀíÒ©¼Á¹«Ë¾"></a>
+				</h1>
+				<p class="hd_txt fl fw" style="margin-left: -90px;">
+					Ìì½òĞÂÁ¦º½¿Æ¼¼ÓĞÏŞ¹«Ë¾<b>Æ·ÅÆË®´¦ÀíÒ©¼ÁÓÅÖÊ·şÎñÉÌ</b>
+				</p>
+				<p class="hd_phone fr">
+					<img src="./images/tel.png" alt="È«¹ú½â¾ö·½°¸¶¨ÖÆÈÈÏß">
+				</p>
 			</div>
+			<!--nav-->
+			<!-- µ¼º½Ô­À´µÄÎ»ÖÃ -->
+		</div>
+		<div class="top" id="nav">
+			<ul>
 
-			<!--		---------------------------------å¹»ç¯ç‰‡é¡¶éƒ¨logo------------------------------------->
-			<div class="logo2">
-				<a href="http://www.hdsyfz.bjedu.cn/index.htm"><img
-					src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151972333904034.png"
-					style="width: 100%; height: 100%;"></a>
-			</div>
-		</header>
-		<!--headerç»“æŸ -->
-		<!--bannerå¼€å§‹-->
-		<article id="banner" class="banner"
-			style="height: 548.031px; display: block;">
+				<li class="cur"><a href="http://www.shuichuliyaoji.cn/"><b>Ê×Ò³</b></a></li>
 
+				<li><a href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+					title="¹ØÓÚÎÒÃÇ" rel="nofollow"><b>¹ØÓÚÎÒÃÇ</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/chanpin/"
+					title="Æ·ÅÆÒ©¼Á"><b>Æ·ÅÆÒ©¼Á</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/cpxx.html"
+					title="Ò©¼ÁÑ¡ĞÍ"><b>Ò©¼ÁÑ¡ĞÍ</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/yaoji/" title="Ò©¼Á³£Ê¶"><b>Ò©¼Á³£Ê¶</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/zixun/" title="×ÊÑ¶ÖĞĞÄ"><b>×ÊÑ¶ÖĞĞÄ</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/jishuziliao/"
+					title="¼¼ÊõÓ¦ÓÃ"><b>¼¼ÊõÓ¦ÓÃ</b></a></li>
+				<li><a href="http://www.shuichuliyaoji.cn/anli/" title="¿Í»§°¸Àı"><b>¿Í»§°¸Àı</b></a></li>
+				<li class="last"><a
+					href="http://www.shuichuliyaoji.cn/yaoji/lxwm.html" title="ÁªÏµÎÒÃÇ"
+					rel="nofollow"><b>ÁªÏµÎÒÃÇ</b></a></li>
 
-			<!-----------------------å¤´éƒ¨å¹»ç¯ç‰‡------------------>
- 			<div class="slide_container" style="height: 548.031px;">
-				<ul class="rslides slide slide1" id="slider"
-					style="height: 548.031px;">
+			</ul>
 
-					<li id="slide1_s0" class=""
-						style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 2500ms ease-in-out 0s;">
-						<a> <img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151969892505707.jpg" alt="å¹»ç¯ç‰‡"
-							style="height: 100%; width: 100%;">
-							<div class="til_slides">
-								<div class="title">
-									<div class="inner">
-										<h3></h3>
-									</div>
-								</div>
-							</div>
-					</a>
-					</li>
-
-					<li id="slide1_s1" class="slide1_on"
-						style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 2500ms ease-in-out 0s;">
-						<a> <img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151972245008503.jpg" alt="å¹»ç¯ç‰‡"
-							style="height: 100%; width: 100%;">
-							<div class="til_slides">
-								<div class="title">
-									<div class="inner">
-										<h3></h3>
-									</div>
-								</div>
-							</div>
-					</a>
-					</li>
-
-					<li id="slide1_s2" class=""
-						style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 2500ms ease-in-out 0s;">
-						<a> <img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151972309903211.jpg" alt="å¹»ç¯ç‰‡"
-							style="height: 100%; width: 100%;">
-							<div class="til_slides">
-								<div class="title">
-									<div class="inner">
-										<h3></h3>
-									</div>
-								</div>
-							</div>
-					</a>
-					</li>
-
-					<li id="slide1_s3" class=""
-						style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 2500ms ease-in-out 0s;">
-						<a> <img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151972273209895.jpg" alt="å¹»ç¯ç‰‡"
-							style="height: 100%; width: 100%;">
-							<div class="til_slides">
-								<div class="title">
-									<div class="inner">
-										<h3></h3>
-									</div>
-								</div>
-							</div>
-					</a>
-					</li>
-				</ul>
-				<a href="http://www.hdsyfz.bjedu.cn/index.php#"
-					class="slide_nav slide1_nav prev">Previous</a><a
-					href="http://www.hdsyfz.bjedu.cn/index.php#"
-					class="slide_nav slide1_nav next">Next</a>
-				<ul class="slide_tabs slide1_tabs">
-					<li class="slide1_s1"><a
-						href="http://www.hdsyfz.bjedu.cn/index.php#" class="slide1_s1">1</a></li>
-					<li class="slide1_s2 slide_here"><a
-						href="http://www.hdsyfz.bjedu.cn/index.php#" class="slide1_s2">2</a></li>
-					<li class="slide1_s3"><a
-						href="http://www.hdsyfz.bjedu.cn/index.php#" class="slide1_s3">3</a></li>
-					<li class="slide1_s4"><a
-						href="http://www.hdsyfz.bjedu.cn/index.php#" class="slide1_s4">4</a></li>
-				</ul>
-
-				<a href="http://www.hdsyfz.bjedu.cn/index.php#"
-					class="slide_nav slide1_nav prev">111Previous</a> <a
-					href="http://www.hdsyfz.bjedu.cn/index.php#"
-					class="slide_nav slide1_nav next">2222Next</a>
-				<ul class="slide_tabs slide1_tabs"></ul>
-			</div> 
-
-
-		</article>
-		<!--bannerç»“æŸ -->
-
-		<!--contentå¼€å§‹-->
-		<!----------------ä¸­éƒ¨èƒŒæ™¯å›¾ç‰‡---------------->
-		<article class="content"
-			style="background: url(&quot;./sites/default/upload/2018-02/27/151969882003105.jpg&quot;) center top / cover no-repeat; margin-top: 0px;">
-
-
-
-			<!----------------ä¸­éƒ¨é¡¶éƒ¨æ ‡é¢˜---------------->
-			<div class="article_main">
-				<div class="art_title">
-					<img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/book.png" alt="">
-					<h2>æœ€æ–°åŠ¨æ€</h2>
-					<i>/Latest News</i>
-				</div>
-
-				<!----------------ä¸­éƒ¨å·¦ä¾§æ ‡é¢˜---------------->
-				<div class="article_l">
-					<a href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=136"
-						class="art_content">
-						<div class="img">
-							<img src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/156194818508713.jpg" alt="">
-						</div> <span>åŒ—äº¬ä¸€é›¶ä¸€ä¸­çŸ³æ²¹åˆ†æ ¡æ ¡å›­å¼€æ”¾æ—¥</span> <!----------------ä¸­éƒ¨å·¦ä¾§å†…å®¹---------------->
-						<!--					<div class="txt">--> <!--						<h3>-->
-						<!--</h3>--> <!--						<p>-->
-						<!--</p>--> <!--					</div>-->
-					</a>
-				</div>
-
-
-
-				<!--------------------ä¸­éƒ¨å³ä¾§æ–‡ç« åˆ—è¡¨--------------->
-				<div class="article_r">
-					<div class="art_list">
-						<span><a
-							href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;id=56">æ›´å¤š+</a></span>
-						<ul>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=135">å¦™è¶£æ¨ªç”Ÿå¯è¿ªæ€ç»´â€”â€”åˆä¸€å¹´çº§æ•°å­¦å˜‰å¹´å</a><i>06-14</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=134">å”±å“çº¢è‰²æ—‹å¾‹
-									äº‰å½“é˜³å…‰å°‘å¹´â€”â€”åŒ—äº¬ä¸€é›¶ä¸€ä¸­çŸ³æ²¹åˆ†æ ¡åˆä¸€å¹´çº§â€œçº¢é¢†å·¾Â·æ­Œå”±ç¥–å›½â€åˆå”±æ¯”èµ›</a><i>06-01</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=133">æµ·æ·€åŒºâ€œç™¾åœºå›¢è¯¾è¿›æ ¡å›­â€èµ°è¿›ä¸€é›¶ä¸€ä¸­çŸ³æ²¹åˆ†æ ¡</a><i>05-24</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=132">åŒ—äº¬ä¸€é›¶ä¸€ä¸­çŸ³æ²¹åˆ†æ ¡æˆç«‹</a><i>05-23</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=131">åŒ—äº¬çŸ³æ²¹é™„ä¸­2019å¹´é«˜ä¸­å…¥å­¦è‰ºæœ¯ç‰¹é•¿ç”Ÿæ‹›ç”Ÿç®€ç« </a><i>04-30</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=130">ä»ä¸¥æ²»å…šæ°¸è¿œåœ¨è·¯ä¸Š
-									â€”â€”çŸ³æ²¹é™„ä¸­å…šç»„ç»‡æ¥å—æµ·æ·€æ•™å·¥å§”å…šå»ºç£æŸ¥å·¥ä½œçºªå®</a><i>11-30</i></li>
-							<li><a
-								href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;id=129">çŸ³æ²¹é™„ä¸­ç¬¬ä¸‰é˜¶æ®µä¸ºæ–°ç–†å’Œç”°åœ°åŒºä¸­å°å­¦ç”Ÿæä¹¦æ´»åŠ¨</a><i>11-05</i></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-		</article>
-		<!--contentç»“æŸ-->
-		<!--footerå¼€å§‹-->
-		<article class="fooer_wrap">
-			<div class="footer">
-				<!-------------------åº•éƒ¨å·¦èœå•å¯¼èˆª----------------->
-				<ul class="fList01">
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=1"
-						target="_blank"> å­¦æ ¡æ¦‚å†µ</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=6"
-						target="_blank"> è¯¾ç¨‹å»ºè®¾</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=11"
-						target="_blank"> æ•™å­¦ç§‘ç ”</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=49"
-						target="_blank"> æ•™è‚²å¤©åœ°</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=15"
-						target="_blank"> å­¦ç”Ÿå‘å±•</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=21"
-						target="_blank"> æ•™å¸ˆé˜Ÿä¼</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=20"
-						target="_blank"> å›½é™…äº¤æµ</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=34"
-						target="_blank"> å…šå»ºä¸“æ </a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=41"
-						target="_blank"> å·¥ä¼šä¹‹å®¶</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.articles&amp;uid=1&amp;id=54"
-						target="_blank"> æ‹›ç”Ÿä¿¡æ¯</a></li>
-				</ul>
-
-				<!-------------------åº•éƒ¨logo----------------->
-				<div class="footer_logo">
-					<a href="http://www.hdsyfz.bjedu.cn/index.php"> <img
-						src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/151969790803070.png" alt=""
-						style="width: 100%; height: 78px;">
-					</a>
-				</div>
-
-
-
-				<!-------------------åº•éƒ¨å³èœå•å¯¼èˆª----------------->
-				<ul class="fList03">
-					<li><a href="javascript:void(0);" target="_blank"> æ³•å¾‹å£°æ˜</a></li>
-					<li><a href="javascript:void(0);" target="_blank"> éšç§ä¿æŠ¤</a></li>
-					<li><a
-						href="http://www.hdsyfz.bjedu.cn/?a=web.article&amp;uid=1&amp;id=114"
-						target="_blank"> è”ç³»æˆ‘ä»¬</a></li>
-				</ul>
-			</div>
-
-
-			<!-------------------ç‰ˆæƒ----------------->
-			<div class="copyrightWrap">
-				<div class="copyright">
-					<span>ç‰ˆæƒæ‰€æœ‰Â©åŒ—äº¬çŸ³æ²¹å­¦é™¢é™„å±ä¸­å­¦</span> <span>åœ°å€ï¼šåŒ—äº¬å¸‚æµ·æ·€åŒº</span> <span>é‚®ç¼–ï¼š100083</span>
-					<span>äº¬ICPå¤‡05065285å·-1</span> <span>äº¬å…¬ç½‘å®‰å¤‡ 111802160047 å·</span>
-				</div>
-			</div>
-		</article>
-		<script type="text/javascript" src="./åŒ—äº¬å¸‚çŸ³æ²¹é™„å±ä¸­å­¦_files/index.js"></script>
-		<!--footerç»“æŸ-->
+		</div>
 	</div>
 
+
+	<!--Í·²¿½áÊø-->
+
+	<!--Ö÷ÒªÄÚÈİ¿ªÊ¼-->
+	<!--banner-->
+
+	<div id="flashs" style="height: 482px; overflow: hidden;">
+
+		<!--<div class="bgitem" id="flashbg0" style="background: url('http://www.shuichuliyaoji.cn/skin/default/images/banner_cj.jpg') no-repeat scroll center top;
+                height: 482px; width: 100%; margin:0 auto;">
+            </div>-->
+		<div class="bgitem" id="flashbg0"
+			style="background: url(&quot;http://localhost:8080/tianjinxlh/images/banner5.jpg&quot;) center top no-repeat scroll; height: 482px; width: 100%; margin: 0px auto; opacity: 0; z-index: 1;">
+		</div>
+
+		<div class="bgitem" id="flashbg1"
+			style="background: url(&quot;http://localhost:8080/tianjinxlh/images/banner6.jpg&quot;) center top no-repeat scroll; height: 482px; width: 100%; margin: 0px auto; opacity: 1; z-index: 2;">
+		</div>
+		<div class="bgitem" id="flashbg2"
+			style="background: url(&quot;http://localhost:8080/tianjinxlh/images/banner7.jpg&quot;) center top no-repeat scroll; height: 482px; width: 100%; margin: 0px auto; opacity: 0;">
+		</div>
+		<!--
+		<div class="btn">
+			<span class="" style="opacity: 0.7;">1</span><span
+				style="opacity: 1;" class="cur">2</span><span style="opacity: 0.7;">3</span>
+		</div>-->
+	</div>
+
+	<div class="content">
+
+
+		<!--²úÆ··ÖÀà-->
+		<div class="classify fl">
+			<h2>²úÆ·ÖĞĞÄ</h2>
+			<h3>
+				<a title="Ë®´¦ÀíÒ©¼Á" href="http://www.shuichuliyaoji.cn/chanpin/"
+					target="_blank">Ë®´¦ÀíÒ©¼Á</a>
+			</h3>
+			<ul>
+				<li><a title="GE|Í¨ÓÃ|±´µÏË®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/ge/">GE|Í¨ÓÃ|±´µÏË®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="º£µÂÄÜË®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/hyd/">º£µÂÄÜË®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="ÌÕÊÏ´ß»¯¼ÁÎü¸½¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/dow/">ÌÕÊÏ´ß»¯¼ÁÎü¸½¼Á</a></li>
+				<li><a title="ÇåÁ¦Ë®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/klt/">ÇåÁ¦Ë®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="ÄÉ¶û¿ÆË®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/nalco/">ÄÉ¶û¿ÆË®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="ÑÇÊ²À¼Ë®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/ashland/">ÑÇÊ²À¼Ë®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="ÂŞÃÅ¹şË¹·ÖÉ¢¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/lmhs/">ÂŞÃÅ¹şË¹·ÖÉ¢¼Á</a></li>
+				<li><a title="µç³§¹øÂ¯ĞõÄı¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/xnj/">µç³§¹øÂ¯ĞõÄı¼Á</a></li>
+				<li><a title="´óºşPHË®´¦ÀíÒ©¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/dahuzugouji/">´óºşPHË®´¦ÀíÒ©¼Á</a></li>
+				<li><a title="°²°İÜÇ×è¹¸¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/zugouji/">°²°İÜÇ×è¹¸¼Á</a></li>
+				<li><a title="É±¾úÃğÔå¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/shajun/">É±¾úÃğÔå¼Á</a></li>
+				<li><a title="Ñ­»·Ë®´¦Àí¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/">Ñ­»·Ë®´¦Àí¼Á</a></li>
+				<li><a title="¸ßĞ§Ë®´¦Àí¼Á"
+					href="http://www.shuichuliyaoji.cn/chanpin/shuichuliji/">¸ßĞ§Ë®´¦Àí¼Á</a></li>
+
+			</ul>
+		</div>
+
+		<div class="pro fr">
+
+
+			<h3 class="common_title" id="pj">
+				<em class="fr"> <a href="http://www.shuichuliyaoji.cn/chanpin/"
+					title="¸ü¶à" rel="nofollow" target="_blank">¸ü¶à&gt;&gt;</a>
+
+				</em> <span><a class="cur"
+					href="http://www.shuichuliyaoji.cn/chanpin/" title="ÈÈÃÅ²úÆ·"
+					target="_blank"> ÈÈÃÅ²úÆ·</a> </span>
+
+			</h3>
+
+
+
+			<div class="clear"></div>
+
+
+			<div class="example">
+
+				<!--example_box-->
+				<div class="example_box">
+					<div class="ul">
+						<ul>
+
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-30/1287.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX401" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/16102601.jpg"
+										alt="»ºÊ´×è¹¸¼ÁAPT-CX401" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-30/1287.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX401" target="_blank">»ºÊ´×è¹¸¼ÁAPT-CX401</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1286.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX303" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/10271337.jpg"
+										alt="»ºÊ´×è¹¸¼ÁAPT-CX303" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1286.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX303" target="_blank">»ºÊ´×è¹¸¼ÁAPT-CX303</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1285.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX307" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/10271336.jpg"
+										alt="»ºÊ´×è¹¸¼ÁAPT-CX307" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1285.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX307" target="_blank">»ºÊ´×è¹¸¼ÁAPT-CX307</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1284.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX203" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/10271333.jpg"
+										alt="»ºÊ´×è¹¸¼ÁAPT-CX203" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/2015-04-21/1284.html"
+									title="»ºÊ´×è¹¸¼ÁAPT-CX203" target="_blank">»ºÊ´×è¹¸¼ÁAPT-CX203</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/hyd/2012-02-09/77.html"
+									title="º£µÂÄÜHY-440·´ÉøÍ¸Ä¤×¨ÓÃÇåÏ´¼Á" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/65d48796a9d84f7ca52983ac06f9eaeb.jpg"
+										alt="º£µÂÄÜHY-440·´ÉøÍ¸Ä¤×¨ÓÃÇåÏ´¼Á" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/hyd/2012-02-09/77.html"
+									title="º£µÂÄÜHY-440·´ÉøÍ¸Ä¤×¨ÓÃÇåÏ´¼Á" target="_blank">º£µÂÄÜHY-440·´ÉøÍ¸Ä¤×¨ÓÃÇåÏ´¼Á</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1277.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC  III" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/58747675ea08e733f350c4ec169a49dd.jpg"
+										alt="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC  III" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1277.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC  III" target="_blank">°²°İÜÇ×è¹¸¼ÁAPROTREAT
+										UC III</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1276.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II PF" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/1289d9e41750860e022daa03d5b5eea4.jpg"
+										alt="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II PF" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1276.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II PF" target="_blank">°²°İÜÇ×è¹¸¼ÁAPROTREAT
+										UC II PF</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1275.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/891b47c67babde16d4e467349b7ca13e.jpg"
+										alt="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II" width="185" height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1275.html"
+									title="°²°İÜÇ×è¹¸¼ÁAPROTREAT UC II" target="_blank">°²°İÜÇ×è¹¸¼ÁAPROTREAT
+										UC II</a></span></li>
+							<li><i><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1274.html"
+									title="°²°İÜÇ(APRO)×è¹¸¼ÁAPROTREAT KLD III LF" target="_blank"> <img
+										src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/0e44d6249fb9bb6a2452035b2504ec4a.jpg"
+										alt="°²°İÜÇ(APRO)×è¹¸¼ÁAPROTREAT KLD III LF" width="185"
+										height="128"></a></i><span><a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/2015-02-16/1274.html"
+									title="°²°İÜÇ(APRO)×è¹¸¼ÁAPROTREAT KLD III LF" target="_blank">°²°İÜÇ(APRO)×è¹¸¼ÁAPROTREAT
+										KL</a></span></li>
+
+
+						</ul>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+
+	<script language="javascript" type="text/javascript">
+		function myfunctions1(ids1, left1, right1) {
+			var ads = new ScrollPicleft();
+			ads.scrollContId = ids1; // ÄÚÈİÈİÆ÷ID""
+			ads.arrLeftId = left1; //×ó¼ıÍ·ID
+			ads.arrRightId = right1; //ÓÒ¼ıÍ·ID
+
+			ads.frameWidth = 900; //ÏÔÊ¾¿ò¿í¶È
+
+			ads.pageWidth = 227; //·­Ò³¿í¶È
+
+			ads.speed = 10; //ÒÆ¶¯ËÙ¶È(µ¥Î»ºÁÃë£¬Ô½Ğ¡Ô½¿ì)
+			ads.space = 10; //Ã¿´ÎÒÆ¶¯ÏñËØ(µ¥Î»px£¬Ô½´óÔ½¿ì)
+			ads.autoPlay = true; //×Ô¶¯²¥·Å
+			ads.autoPlayTime = 3; //×Ô¶¯²¥·Å¼ä¸ôÊ±¼ä(Ãë)
+
+			ads.initialize(); //³õÊ¼»¯
+		}
+	</script>
+	<div class="cp">
+		<h3 class="fw">
+			<span><a href="http://www.shuichuliyaoji.cn/anli/"
+				target="_blank" title="¿Í»§°¸Àı">¿Í»§°¸Àı</a></span>
+		</h3>
+		<div class="cp_box">
+
+			<!--cp_con-->
+
+			<div class="cp_con">
+				<em class="prev fl"><a href="javascript:" id="left12"></a> </em>
+				<div class="ul fl" id="news12"
+					style="float: left; width: 900px; overflow: hidden;">
+					<div style="overflow: hidden; zoom: 1; width: 32766px;">
+						<div style="float: left;">
+							<ul>
+
+
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1150.html"
+										title="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/b0edf4e57c68f1326c37502a9b1639b3.jpg"
+											alt="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1150.html"
+										title="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank">¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1093.html"
+										title="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/d35339de57feb20812d724d1b106da8b.jpg"
+											alt="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1093.html"
+										title="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" target="_blank">Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1091.html"
+										title="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/950fdaef4dde7124e59e5e43a29fde6a.jpg"
+											alt="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1091.html"
+										title="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank">ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1086.html"
+										title="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/5ed6ac65b667f2654a2daa1d6038ca85.jpg"
+											alt="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1086.html"
+										title="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" target="_blank">Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1082.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" target="_blank">
+											<img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/2239c3070860b5b452521d585df14f7c.jpg"
+											alt="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" width="205"
+											height="154">
+									</a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1082.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" target="_blank">¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1081.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" target="_blank">
+											<img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/84e2a69a672a16f2aba93cd9b22780cd.jpg"
+											alt="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" width="205"
+											height="154">
+									</a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1081.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" target="_blank">¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1076.html"
+										title="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/6869537c0777a76b5f59a939c57e1695.jpg"
+											alt="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1076.html"
+										title="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" target="_blank">±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/878.html"
+										title="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/acfe81293b961d4e23aea65cb8a820c4.jpg"
+											alt="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/878.html"
+										title="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" target="_blank">¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸</a></span></li>
+
+
+							</ul>
+						</div>
+						<div style="float: left;">
+							<ul>
+
+
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1150.html"
+										title="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/b0edf4e57c68f1326c37502a9b1639b3.jpg"
+											alt="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1150.html"
+										title="¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank">¹ãÖİÔìÖ½ÓĞÏŞ¹«Ë¾Ìá¹©¸ß·Ö×ÓĞõÄı</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1093.html"
+										title="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/d35339de57feb20812d724d1b106da8b.jpg"
+											alt="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1093.html"
+										title="Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó½»»»Ê÷Ö¬ºÄ²Ä" target="_blank">Îª¹ş¶û±õ°Ù¼ÒµÃÀä¶³Ê³Æ·Ìá¹©Àë×Ó</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1091.html"
+										title="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/950fdaef4dde7124e59e5e43a29fde6a.jpg"
+											alt="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1091.html"
+										title="ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí¸ß·Ö×ÓĞõÄı¼ÁÏîÄ¿" target="_blank">ÎªÉ½¶«Ä³¹©Ë®¹«Ë¾³¤ÆÚÌá¹©Ë®´¦Àí</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1086.html"
+										title="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/5ed6ac65b667f2654a2daa1d6038ca85.jpg"
+											alt="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1086.html"
+										title="Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾Ò©¼ÁÏîÄ¿¹¤³Ì" target="_blank">Ìì½òÄ³ÀäÔş³§·ÏË®´¦Àí²ÉÓÃÎÒ¹«Ë¾</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1082.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" target="_blank">
+											<img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/2239c3070860b5b452521d585df14f7c.jpg"
+											alt="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" width="205"
+											height="154">
+									</a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1082.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015052005" target="_blank">¡¾ÖĞ±êÏ²±¨¡¿ºÓÄÏÄ³·¢µçÆóÒµ×è¹¸</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1081.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" target="_blank">
+											<img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/84e2a69a672a16f2aba93cd9b22780cd.jpg"
+											alt="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" width="205"
+											height="154">
+									</a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1081.html"
+										title="¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸¼ÁÏîÄ¿¹¤³Ì±àºÅ£ºSY2015032105" target="_blank">¡¾ÖĞ±êÏ²±¨¡¿´óÁ¬Ä³µç³§»ºÊ´×è¹¸</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/1076.html"
+										title="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/6869537c0777a76b5f59a939c57e1695.jpg"
+											alt="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/1076.html"
+										title="±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû¶¾Ò©¼Á" target="_blank">±±¾©Ä³´óĞÍÌåÓı³¡ÓÎÓ¾¹İÓÎÓ¾³ØÏû</a></span></li>
+								<li><i><a
+										href="http://www.shuichuliyaoji.cn/anli/878.html"
+										title="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" target="_blank"> <img
+											src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/acfe81293b961d4e23aea65cb8a820c4.jpg"
+											alt="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" width="205" height="154"></a></i><span><a
+										href="http://www.shuichuliyaoji.cn/anli/878.html"
+										title="¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸" target="_blank">¸£ÖİÓÎÓ¾³ØË®´¦ÀíÒ©¼ÁÓ¦ÓÃ·½°¸</a></span></li>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<em class="next fr"><a href="javascript:" id="right12"> </a></em>
+			</div>
+			<script type="text/javascript">
+				myfunctions1("news12", "left12", "right12");
+			</script>
+
+
+		</div>
+	</div>
+
+	<script language="javascript" type="text/javascript">
+		$(".menu1 li ").mouseover(
+				function() {
+					var _index = $(this).addClass("cur").siblings("li")
+							.removeClass("cur").parent("ul").children("li")
+							.index(this);
+					//        $(".cp_box em a").eq(_index).show().siblings("a").hide();
+					//$(".tabc>div.al_con").eq(_index).show().siblings("div.al_con").hide();
+					$(".cp_con").eq(_index).show().siblings(".cp_con").hide();
+				}).eq("0").trigger("mouseover");
+	</script>
+
+	<!--leader-->
+	<div class="leader">
+		<h3 class="fw">°²°İÜÇ×è¹¸¼ÁÓÅÖÊ·şÎñÉÌ</h3>
+		<div class="leader_box">
+			<dl class="fl">
+				<dt class="fl">
+					<img src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/leader_pic01.jpg"
+						alt="" width="134" height="134">
+				</dt>
+				<dd class="fl">
+					<h4>ÒµÎñ¸²¸Ç</h4>
+					<p>×è¹¸¼Á¡¢·´ÉøÍ¸×è¹¸¼Á¡¢»ºÊ´×è¹¸¼ÁµÈ¾ùÔ¶ÏúÍù¹úÄÚºÍ¶«ÄÏÑÇÊĞ³¡¡£</p>
+				</dd>
+			</dl>
+			<dl class="fr">
+				<dt class="fl">
+					<img src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/leader_pic02.jpg"
+						alt="">
+				</dt>
+				<dd class="fl">
+					<h4>ÑĞ·¢ÊµÁ¦</h4>
+					<p>×¨ÒµµÄ×è¹¸¼Á¼ìÑéºÍË®ÖÊÆÀ¶¨ÊÔÑéÊÒ¡£</p>
+				</dd>
+			</dl>
+			<div class="clear"></div>
+			<dl class="fl">
+				<dt class="fl">
+					<img src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/leader_pic03.jpg"
+						alt="">
+				</dt>
+				<dd class="fl">
+					<h4>Æ·ÖÊ±£Ö¤</h4>
+					<p>ÃÀ¹úUL/NSF£¨¹«Á¢ÈÏÖ¤»ú¹¹£©µÄÈÏÖ¤¡¢ÖĞ¹úÎÀÉúĞí¿É¼°¶à¼Ò¹«Ë¾µÄÈÏÖ¤¡£</p>
+				</dd>
+			</dl>
+			<dl class="fr">
+				<dt class="fl">
+					<img src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/leader_pic04.jpg"
+						alt="">
+				</dt>
+				<dd class="fl">
+					<h4>·şÎñ±£ÕÏ</h4>
+					<p>È«·½Î»·şÎñ£¬Ìá¹©·½±ãµÄ·´ÉøÍ¸×è¹¸¼Á¡¢»ºÊ´×è¹¸¼ÁµÈ·şÎñÖ§³Ö¡£</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<!--plan-->
+	<div class="plan">
+		<div class="plan_box">
+			<h3 class="fw">
+
+				<p>ÖªÃûÆ·ÅÆ·´ÉøÍ¸×è¹¸¼Á</p>
+
+			</h3>
+			<ul>
+				<li><i> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/plan_pic01.jpg"
+						alt="ÃÀ¹úGEÍ¨ÓÃ±´µÏÏµÁĞ" width="160" height="85"></i><span><b>ÃÀ¹úGEÍ¨ÓÃ±´µÏÏµÁĞ</b></span></li>
+				<li><i> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/plan_pic02.jpg"
+						alt="°²°İÜÇÏµÁĞ"></i><span><b>°²°İÜÇÏµÁĞ</b></span></li>
+				<li><i> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/plan_pic03.jpg"
+						alt="ÃÀ¹úÂŞÃÅ¹şË¹ÏµÁĞ"></i><span><b>ÃÀ¹úÂŞÃÅ¹şË¹ÏµÁĞ</b></span></li>
+				<li><i> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/plan_pic04.jpg"
+						alt="ÃÀ¹úÄÉ¶û¿ÆÏµÁĞ"></i><span><b>ÃÀ¹úÄÉ¶û¿ÆÏµÁĞ</b></span></li>
+				<li class="icon"><i> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/plan_pic05.jpg"
+						alt="ÌÕÊÏ»¯Ñ§£¨DOW£©ÏµÁĞ"></i><span><b>ÌÕÊÏ»¯Ñ§£¨DOW£©ÏµÁĞ</b></span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="content">
+
+		<div class="ad pr">
+			<img
+				src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/20140524164430_18953.jpg"
+				alt="°²°İÜÇÖªÃûË®´¦ÀíÒ©¼ÁÆ·ÅÆ·şÎñÉÌ">
+		</div>
+		<!--×ß½ø°²°İÜÇ-->
+
+
+		<div class="Intro fl">
+			<h3 class="common_icon">
+				<em class="fr"><a
+					href="http://www.shuichuliyaoji.cn/yaoji/company.html" title="¸ü¶à"
+					target="_blank" rel="nofollow"> ¸ü¶à&gt;&gt;</a></em><span><a
+					href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+					title="×ß½ø°²°İÜÇ" target="_blank" rel="nofollow">×ß½ø°²°İÜÇ</a></span>
+			</h3>
+			<dl class="fl">
+				<dt class="fl">
+					<a href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+						title="°²°İÜÇ" target="_blank" rel="nofollow"> <img
+						src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/gsjs.jpg" alt="°²°İÜÇ"
+						width="242" height="171"></a>
+				</dt>
+				<dd class="fl">
+					<h4>
+						<a href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+							title="°²°İÜÇ" target="_blank" rel="nofollow"> °²°İÜÇ</a>
+					</h4>
+					<p>
+						°²°İÜÇÍ¨¹ıISO9001ÖÊÁ¿ÌåÏµÈÏÖ¤¡¢ISO14001»·¾³ÌåÏµÈÏÖ¤¼°Å·ÃËCEÈÏÖ¤¡£¹«Ë¾ÏÂÉèÑĞ·¢ÖĞĞÄ¡¢Éú²ú¼Ó¹¤³µ¼ä¡¢ÊĞ³¡²¿¡¢ÊÛºó·şÎñ²¿ÎªÒ»Ìå¡£¶àÄêÀ´ÖÂÁ¦ÓÚÑ­»·Ë®´¦ÀíµÄÑĞ¾¿¡¢Éú²úÊÛºó·şÎñ£¬Ñ­»·Ë®´¦Àí²úÆ·Ö÷ÒªÏúÍù¹úÄÚºÍ¶«ÄÏÑÇÊĞ³¡£¬ÊÇ¹úÄÚÍâ¸÷´óÖªÃûÆ·ÅÆÒ©¼ÁµÄÏúÊÛÉÌÖ®Ò»¡£
+					</p>
+					<span class="mbtn"><a
+						href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+						title="ÁË½â¸ü¶à" target="_blank" rel="nofollow">ÁË½â¸ü¶à+&gt;&gt;</a></span>
+				</dd>
+			</dl>
+		</div>
+
+		<!--ÈÙÓş×ÊÖÊ-->
+
+
+
+		<div class="fr honour">
+			<h3 class="common_icon">
+				<span><a>ÈÙÓş×ÊÖÊ</a></span>
+			</h3>
+			<!--honour_box-->
+			<div class="honour_box">
+				<em class="prev fl"><a href="javascript:" id="LeftID35"></a></em>
+				<div class="ul fl" id="ScollName35"
+					style="width: 206px; overflow: hidden;">
+					<div style="overflow: hidden; zoom: 1; width: 32766px;">
+						<div style="float: left;">
+							<ul>
+
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/zlglrz.jpg"
+									alt="ISO9001ÖÊÁ¿¹ÜÀíÌåÏµÈÏÖ¤" title="ISO9001ÖÊÁ¿¹ÜÀíÌåÏµÈÏÖ¤" width="184"
+									height="253"></li>
+
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/hjglrz.jpg"
+									alt="ISO14001»·¾³¹ÜÀíÌåÏµÈÏÖ¤" title="ISO14001»·¾³¹ÜÀíÌåÏµÈÏÖ¤" width="184"
+									height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/cerz.jpg"
+									alt="Å·ÃËCEÈÏÖ¤" title="Å·ÃËCEÈÏÖ¤" width="184" height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/syxxzl.jpg"
+									alt="ÊµÓÃĞÂĞÍ×¨ÀûÖ¤Êé" title="ÊµÓÃĞÂĞÍ×¨ÀûÖ¤Êé" width="184" height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/gxjsqy.jpg"
+									alt="¸ßĞÂ¼¼ÊõÆóÒµÖ¤Êé" title="¸ßĞÂ¼¼ÊõÆóÒµÖ¤Êé" width="184" height="253"></li>
+							</ul>
+						</div>
+						<div style="float: left;">
+							<ul>
+
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/zlglrz.jpg"
+									alt="ISO9001ÖÊÁ¿¹ÜÀíÌåÏµÈÏÖ¤" title="ISO9001ÖÊÁ¿¹ÜÀíÌåÏµÈÏÖ¤" width="184"
+									height="253"></li>
+
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/hjglrz.jpg"
+									alt="ISO14001»·¾³¹ÜÀíÌåÏµÈÏÖ¤" title="ISO14001»·¾³¹ÜÀíÌåÏµÈÏÖ¤" width="184"
+									height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/cerz.jpg"
+									alt="Å·ÃËCEÈÏÖ¤" title="Å·ÃËCEÈÏÖ¤" width="184" height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/syxxzl.jpg"
+									alt="ÊµÓÃĞÂĞÍ×¨ÀûÖ¤Êé" title="ÊµÓÃĞÂĞÍ×¨ÀûÖ¤Êé" width="184" height="253"></li>
+								<li><img
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/gxjsqy.jpg"
+									alt="¸ßĞÂ¼¼ÊõÆóÒµÖ¤Êé" title="¸ßĞÂ¼¼ÊõÆóÒµÖ¤Êé" width="184" height="253"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<em class="next fr"><a href="javascript:" id="RightID35"></a></em>
+			</div>
+		</div>
+
+		<script language="javascript" type="text/javascript">
+			var ads = new ScrollPicleft();
+			ads.scrollContId = "ScollName35"; // ÄÚÈİÈİÆ÷ID""
+			ads.arrLeftId = "LeftID35"; //×ó¼ıÍ·ID
+			ads.arrRightId = "RightID35"; //ÓÒ¼ıÍ·ID
+
+			ads.frameWidth = 206; //ÏÔÊ¾¿ò¿í¶È
+
+			ads.pageWidth = 206; //·­Ò³¿í¶È
+
+			ads.speed = 10; //ÒÆ¶¯ËÙ¶È(µ¥Î»ºÁÃë£¬Ô½Ğ¡Ô½¿ì)
+			ads.space = 10; //Ã¿´ÎÒÆ¶¯ÏñËØ(µ¥Î»px£¬Ô½´óÔ½¿ì)
+			ads.autoPlay = true; //×Ô¶¯²¥·Å
+			ads.autoPlayTime = 3; //×Ô¶¯²¥·Å¼ä¸ôÊ±¼ä(Ãë)
+
+			ads.initialize(); //³õÊ¼»¯
+		</script>
+
+		<div class="clear"></div>
+
+		<!--Ò©¼Á³£Ê¶/×ÊÑ¶ÖĞĞÄ/¼¼ÊõÓ¦ÓÃ-->
+
+		<div class="news fl">
+			<h3 class="common_title">
+				<em class="fr"> <a href="http://www.shuichuliyaoji.cn/yaoji/"
+					title="¸ü¶à" id="span_shk10" target="_blank" rel="nofollow">¸ü¶à&gt;&gt;</a>
+
+				</em><span id="hl"> <a class="cur" onmouseover="ShowCheck11(0)"
+					href="http://www.shuichuliyaoji.cn/yaoji/" title="Ò©¼Á³£Ê¶"
+					target="_blank"> Ò©¼Á³£Ê¶</a>
+
+
+				</span>
+			</h3>
+
+			<div class="ul" id="shk10">
+
+
+
+				<ul>
+
+					<li><span class="fr">[2017-05-15]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-07-26/23.html"
+							title="×è¹¸¼ÁÔÚ¹øÂ¯Ë®´¦ÀíÖĞµÄÖØÒª×÷ÓÃ" target="_blank">×è¹¸¼ÁÔÚ¹øÂ¯Ë®´¦ÀíÖĞµÄÖØ</a></em></li>
+					<li><span class="fr">[2017-05-15]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-10-08/53.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁÌØµã¼°Ó¦ÓÃ±ØÒªĞÔ" target="_blank">·´ÉøÍ¸×è¹¸¼ÁÌØµã¼°Ó¦ÓÃ±Ø</a></em></li>
+					<li><span class="fr">[2017-05-15]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-11-11/54.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁµÄÖ÷ÒªÌØµãÓĞÄÄĞ©£¿" target="_blank">·´ÉøÍ¸×è¹¸¼ÁµÄÖ÷ÒªÌØµãÓĞ</a></em></li>
+					<li><span class="fr">[2017-05-15]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-12-26/55.html"
+							title="¹øÂ¯×¨ÓÃ»ºÊ´×è¹¸¼ÁÖ÷Òª×÷ÓÃÓĞÄÄĞ©£¿" target="_blank">¹øÂ¯×¨ÓÃ»ºÊ´×è¹¸¼ÁÖ÷Òª×÷</a></em></li>
+					<li><span class="fr">[2015-07-09]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-05-28/10.html"
+							title="¹øÂ¯×è¹¸¼ÁÊ¹ÓÃÇé¿öËµÃ÷" target="_blank">¹øÂ¯×è¹¸¼ÁÊ¹ÓÃÇé¿öËµÃ÷</a></em></li>
+					<li><span class="fr">[2015-07-09]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-07-25/17.html"
+							title="Ë®´¦Àí¹¤ÒÕÖĞ»ºÊ´×è¹¸¼Á×÷ÓÃÔ­Àí½éÉÜ" target="_blank">Ë®´¦Àí¹¤ÒÕÖĞ»ºÊ´×è¹¸¼Á×÷</a></em></li>
+					<li><span class="fr">[2015-07-09]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-07-17/14.html"
+							title="µç³§Ñ­»·Ë®»ºÊ´×è¹¸¼ÁĞÔÄÜÑĞ¾¿" target="_blank">µç³§Ñ­»·Ë®»ºÊ´×è¹¸¼ÁĞÔÄÜ</a></em></li>
+					<li><span class="fr">[2015-07-09]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/yaoji/2013-06-05/12.html"
+							title="¹øÂ¯ĞĞÒµ·´ÉøÍ¸×è¹¸¼ÁµÄÊ¹ÓÃËµÃ÷" target="_blank">¹øÂ¯ĞĞÒµ·´ÉøÍ¸×è¹¸¼ÁµÄÊ¹</a></em></li>
+				</ul>
+			</div>
+
+
+
+		</div>
+
+		<div class="news fl" style="margin-left: 15px;">
+			<h3 class="common_title">
+				<em class="fr"> <a href="http://www.shuichuliyaoji.cn/zixun/"
+					title="¸ü¶à" id="span_shk10" target="_blank" rel="nofollow">¸ü¶à&gt;&gt;</a>
+
+				</em><span id="hl"> <a class="cur" onmouseover="ShowCheck11(0)"
+					href="http://www.shuichuliyaoji.cn/zixun/" title="×ÊÑ¶ÖĞĞÄ"
+					target="_blank"> ×ÊÑ¶ÖĞĞÄ</a>
+
+
+				</span>
+			</h3>
+
+			<div class="ul" id="shk10">
+
+
+
+				<ul>
+
+					<li><span class="fr">[2019-10-12]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1755.html"
+							title="Ê¹ÓÃË®´¦ÀíÒ©¼ÁµÄ×¢ÒâÊÂÏî" target="_blank">Ê¹ÓÃË®´¦ÀíÒ©¼ÁµÄ×¢ÒâÊÂÏî</a></em></li>
+					<li><span class="fr">[2019-09-29]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1754.html"
+							title="¸´ºÏ×è¹¸¼ÁÓ¦ÓÃËµÃ÷" target="_blank">¸´ºÏ×è¹¸¼ÁÓ¦ÓÃËµÃ÷</a></em></li>
+					<li><span class="fr">[2019-09-24]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1753.html"
+							title="¿ÉÓÃÓÚÊ³Æ·Éú²úÉè±¸µÄÉ±¾ú¼ÁÓĞÄÄĞ©£¿" target="_blank">¿ÉÓÃÓÚÊ³Æ·Éú²úÉè±¸µÄÉ±¾ú</a></em></li>
+					<li><span class="fr">[2019-09-17]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1752.html"
+							title="Ó°Ïì×è¹¸¼ÁĞ§¹ûµÄÒòËØÓĞÄÄĞ©£¿" target="_blank">Ó°Ïì×è¹¸¼ÁĞ§¹ûµÄÒòËØÓĞÄÄ</a></em></li>
+					<li><span class="fr">[2019-09-09]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1751.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁÓĞÄÄ¼¸ÖÖ£¿" target="_blank">·´ÉøÍ¸×è¹¸¼ÁÓĞÄÄ¼¸ÖÖ£¿</a></em></li>
+					<li><span class="fr">[2019-09-03]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1748.html"
+							title="ÈçºÎÅĞ¶Ï·´ÉøÍ¸×è¹¸¼ÁµÄÖÊÁ¿ºÃ»µ£¿" target="_blank">ÈçºÎÅĞ¶Ï·´ÉøÍ¸×è¹¸¼ÁµÄÖÊ</a></em></li>
+					<li><span class="fr">[2019-08-27]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1747.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁÔ­ÀíÊÇÊ²Ã´£¿" target="_blank">·´ÉøÍ¸×è¹¸¼ÁÔ­ÀíÊÇÊ²Ã´£¿</a></em></li>
+					<li><span class="fr">[2019-08-20]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/1744.html"
+							title="·´ÉøÍ¸×è¹¸¼Á¡¢»ºÊ´¼ÁºÍ»ºÊ´×è¹¸¼ÁÓĞÄÄĞ©Çø±ğ£¿" target="_blank">·´ÉøÍ¸×è¹¸¼Á¡¢»ºÊ´¼ÁºÍ»º</a></em></li>
+				</ul>
+			</div>
+
+
+
+		</div>
+
+		<div class="news fr">
+			<h3 class="common_title">
+				<em class="fr"> <a
+					href="http://www.shuichuliyaoji.cn/jishuziliao/" title="¸ü¶à"
+					id="span_shk10" target="_blank" rel="nofollow">¸ü¶à&gt;&gt;</a>
+
+				</em><span id="hl"> <a class="cur" onmouseover="ShowCheck11(0)"
+					href="http://www.shuichuliyaoji.cn/jishuziliao/" title="¼¼ÊõÓ¦ÓÃ"
+					target="_blank"> ¼¼ÊõÓ¦ÓÃ</a>
+
+
+				</span>
+			</h3>
+
+			<div class="ul" id="shk10">
+
+
+
+				<ul>
+
+					<li><span class="fr">[2019-09-04]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1750.html"
+							title="¼òÒª½éÉÜ×è¹¸¼ÁºÍ³ı¹¸¼ÁµÄÇø±ğÓĞÄÄĞ©" target="_blank">¼òÒª½éÉÜ×è¹¸¼ÁºÍ³ı¹¸¼ÁµÄ</a></em></li>
+					<li><span class="fr">[2019-09-04]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1749.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁµÄ¹¤×÷Ô­ÀíÊÇÊ²Ã´" target="_blank">·´ÉøÍ¸×è¹¸¼ÁµÄ¹¤×÷Ô­ÀíÊÇ</a></em></li>
+					<li><span class="fr">[2019-08-26]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1746.html"
+							title="×è¹¸¼ÁĞ§¹û¶¼ÊÜÄÄĞ©ÒòËØÓ°Ïì£¿" target="_blank">×è¹¸¼ÁĞ§¹û¶¼ÊÜÄÄĞ©ÒòËØÓ°</a></em></li>
+					<li><span class="fr">[2019-08-26]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1745.html"
+							title="·´ÉøÍ¸×è¹¸¼ÁÒª×¢ÒâµÄÎÊÌâÓĞÄÄĞ©" target="_blank">·´ÉøÍ¸×è¹¸¼ÁÒª×¢ÒâµÄÎÊÌâ</a></em></li>
+					<li><span class="fr">[2019-03-12]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1580.html"
+							title="Ê²Ã´ÑùµÄ»ºÊ´×è¹¸¼Á±È½ÏºÃ£¿" target="_blank">Ê²Ã´ÑùµÄ»ºÊ´×è¹¸¼Á±È½ÏºÃ</a></em></li>
+					<li><span class="fr">[2019-03-12]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1579.html"
+							title="»ºÊ´×è¹¸¼ÁÔõÃ´ÓÃ£¿" target="_blank">»ºÊ´×è¹¸¼ÁÔõÃ´ÓÃ£¿</a></em></li>
+					<li><span class="fr">[2019-03-08]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1575.html"
+							title="ÏÄÌìÈçºÎ´¢´æ»ºÊ´×è¹¸¼Á£¿" target="_blank">ÏÄÌìÈçºÎ´¢´æ»ºÊ´×è¹¸¼Á£¿</a></em></li>
+					<li><span class="fr">[2019-03-08]</span><em class="fl"><a
+							href="http://www.shuichuliyaoji.cn/jishuziliao/1574.html"
+							title="Ë®´¦ÀíÒ©¼ÁÄÜÆµ·±»»Âğ£¿" target="_blank">Ë®´¦ÀíÒ©¼ÁÄÜÆµ·±»»Âğ£¿</a></em></li>
+				</ul>
+			</div>
+
+
+
+		</div>
+
+
+		<!--contact-->
+
+		<div class="clear"></div>
+	</div>
+	<div class="linear"></div>
+
+
+	<!--Ö÷ÒªÄÚÈİ½áÊø-->
+	<!--µ×²¿ ¿ªÊ¼-->
+
+	<div class="footer">
+		<div class="foot_bottom">
+			<div class="fbox">
+				<div class="foot_l">
+					<ul>
+						<li><img
+							src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/tel_ico.png"></li>
+						<li><p class="tel1">4000-717-999</p></li>
+						<li><img
+							src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/weixin_logo.jpg"
+							alt="Î¢ĞÅ¹Ø×¢" width="144" height="144"></li>
+						<li><p class="hd">ÓëÀ³ÌØÀ³µÂ»¥¶¯</p></li>
+					</ul>
+				</div>
+				<div class="foot_r">
+					<ul>
+						<li><span><a
+								href="http://www.shuichuliyaoji.cn/yaoji/company.html"
+								target="_blank">¹«Ë¾½éÉÜ</a></span>
+							<p>
+								<a href="http://www.shuichuliyaoji.cn/anli/" target="_blank">¿Í»§°¸Àı</a>
+								<a href="http://www.shuichuliyaoji.cn/yaoji/flsm.html"
+									target="_blank">·¨ÂÉÉùÃ÷</a> <a
+									href="http://www.shuichuliyaoji.cn/map.html" target="_blank">ÍøÕ¾µØÍ¼</a>
+							</p></li>
+						<li><span><a
+								href="http://www.shuichuliyaoji.cn/zixun/" target="_blank">×ÊÑ¶ÖĞĞÄ</a></span>
+							<p>
+								<a href="http://www.shuichuliyaoji.cn/yingyonglingyu/"
+									target="_blank">Ó¦ÓÃÁìÓò</a> <a
+									href="http://www.shuichuliyaoji.cn/jishuziliao/"
+									target="_blank">¼¼ÊõÓ¦ÓÃ</a> <a
+									href="http://www.shuichuliyaoji.cn/zixun/shuiyujiankang/"
+									target="_blank">³£¼ûÎÊÌâ</a> <a
+									href="http://www.shuichuliyaoji.cn/yaoji/" target="_blank">Ò©¼Á³£Ê¶</a>
+							</p></li>
+						<li class="cp1"><span><a
+								href="http://www.shuichuliyaoji.cn/chanpin/" target="_blank">Æ·ÅÆË®´¦ÀíÒ©¼Á</a></span>
+							<p>
+								<a href="http://www.shuichuliyaoji.cn/chanpin/ge/"
+									target="_blank">GE±´µÏË®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/hyd/"
+									target="_blank">º£µÂÄÜË®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/dow/"
+									target="_blank">ÌÕÊÏ´ß»¯¼ÁÎü¸½¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/klt/"
+									target="_blank">ÇåÁ¦Ë®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/nalco/"
+									target="_blank">ÄÉ¶û¿ÆË®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/ashland/"
+									target="_blank">ÑÇÊ²À¼Ë®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/lmhs/"
+									target="_blank">ÂŞÃÅ¹şË¹·ÖÉ¢¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/xnj/"
+									target="_blank">µç³§¹øÂ¯ĞõÄı¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/dahuzugouji/"
+									target="_blank">´óºşPHË®´¦ÀíÒ©¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/zugouji/"
+									target="_blank">°²°İÜÇ×è¹¸¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/shajun/"
+									target="_blank">É±¾úÃğÔå¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/xunhuanshui/"
+									target="_blank">Ñ­»·Ë®´¦Àí¼Á</a> <a
+									href="http://www.shuichuliyaoji.cn/chanpin/shuichuliji/"
+									target="_blank">¸ßĞ§Ë®´¦Àí¼Á</a>
+							</p></li>
+						<li class="bqsy">
+							<p>À³ÌØÀ³µÂ×ÔÑĞ·¢·´ÉøÍ¸Ò©¼ÁÒÔÀ´£¬ÊÇ¹úÄÚÓÅĞãµÄ·´ÉøÍ¸ÏµÍ³×¨ÓÃ°²°İÜÇ×è¹¸¼Á¡¢É±¾úÃğÔå¼Á¡¢Ñ­»·Ë®´¦Àí¼Á¡¢¸ßĞ§Ë®´¦Àí¼Á¡¢Ä¤Ôª¼ş¼°Ïà¹ØÅä¼şµÄ¹©Ó¦ÉÌ¡£</p>
+							<p>
+								°æÈ¨ËùÓĞ£ºÌì½òĞÂÁ¦º½¿Æ¼¼ÓĞÏŞ¹«Ë¾ <span class="beian">ÁÉICP±¸10017180ºÅ-41</span>
+							</p>
+							<p class="tj">
+								<a target="_blank"
+									href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21010202000074"
+									rel="nofollow"
+									style="display: inline-block; text-decoration: none; height: 20px; line-height: 20px; COLOR: rgba(255, 255, 255, 0.25);">
+									<img src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/batp-ico.png"
+									style="float: left; margin: 0;">ÁÉ¹«Íø°²±¸ 21010202000074ºÅ 
+								</a>
+								<script language="javascript" type="text/javascript"
+									src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/f.txt"></script>
+
+								<script type="text/javascript">
+									var cnzz_protocol = (("https:" == document.location.protocol) ? " https://"
+											: " http://");
+									document
+											.write(unescape("%3Cspan id='cnzz_stat_icon_1000117860'%3E%3C/span%3E%3Cscript src='"
+													+ cnzz_protocol
+													+ "s22.cnzz.com/z_stat.php%3Fid%3D1000117860%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+								</script>
+								<span id="cnzz_stat_icon_1000117860"></span>
+								<script src="./×è¹¸¼Á_·´ÉøÍ¸×è¹¸¼Á_»ºÊ´×è¹¸¼Á³§¼Ò¼Û¸ñ¡ª°²°İÜÇË®´¦ÀíÒ©¼Á¹«Ë¾_files/z_stat.php"
+									type="text/javascript"></script>
+								<script>
+									(function() {
+										var bp = document
+												.createElement('script');
+										var curProtocol = window.location.protocol
+												.split(':')[0];
+										if (curProtocol === 'https') {
+											bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+										} else {
+											bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+										}
+										var s = document
+												.getElementsByTagName("script")[0];
+										s.parentNode.insertBefore(bp, s);
+									})();
+								</script>
+
+
+
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?8e74188c7ee87159f12726b4e5cb8bd0";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
+
+
+	<!--µ×²¿ ½áÊø-->
+	<div class="yqlj1"></div>
+
+	<style>
+QUZHUANPAN-PLUGIN {
+	display: inline;
+	cursor: pointer;
+}
+
+QUZHUANPAN-PLUGIN-TIPS {
+	white-space: nowrap;
+}
+
+.QUZHUANPAN-PLUGIN-VALIDATE-NOTPASS {
+	text-decoration: line-through;
+	color: #ccc;
+}
+
+QUZHUANPAN-PLUGIN-TIPS::before {
+	background-position: center;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	width: 1em;
+	height: 1em;
+	margin: 0 1px .15em 1px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.QUZHUANPAN-PLUGIN-VALIDATE-NOTPASS>QUZHUANPAN-PLUGIN-TIPS::before {
+	content: '';
+	background-image:
+		url(http://www.quzhuanpan.com/media/tampermonkey/tips/error.png)
+}
+
+.QUZHUANPAN-PLUGIN-VALIDATE-PASS>QUZHUANPAN-PLUGIN-TIPS::before {
+	content: '';
+	background-image:
+		url(http://www.quzhuanpan.com/media/tampermonkey/tips/success.png)
+}
+
+.QUZHUANPAN-PLUGIN-VALIDATE-UNCERTAINTY>QUZHUANPAN-PLUGIN-TIPS::before {
+	content: '';
+	background-image:
+		url(http://www.quzhuanpan.com/media/tampermonkey/tips/uncertainty.png)
+}
+
+.QUZHUANPAN-PLUGIN-VALIDATE-LOCK>QUZHUANPAN-PLUGIN-TIPS::before {
+	content: '';
+	background-image:
+		url(http://www.quzhuanpan.com/media/tampermonkey/tips/lock.png)
+}
+</style>
+	<div id="Pinbox-extension-installed"></div>
+	<div id="download_plus_animation"></div>
 </body>
 </html>
