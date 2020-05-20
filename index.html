@@ -1,305 +1,391 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anonym</title>
-<style>
-body {
-  padding: 0px;
-  margin: 0px;
-  background-color: #252525;
-}
+<html>
 
-.hidden {
-  display: none;
-}
+	<script src="js/clipboard.js"></script>
+    <script>
+    var clipboard = new ClipboardJS('.fuzhitkl');
 
-#spring-text {
-  position: absolute;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="dest/css/normalize.css" />
-<link rel="stylesheet" href="dest/css/style.css">
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
 
-</head>
-<body>
-<div class="wrapper">
-	<header class="header">
-			<!-- 尝试移动鼠标并单击文本区域那就这样吧❤再爱都曲终人散了 -->
-<div id="title-desktop" class="hidden">那就这样吧❤再爱都曲终人散了</div>
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    </script>
 
-<div id="title-mobile" class="hidden">Chinaz</div>
-
-<canvas id="spring-text"></canvas>
-
-<script>
-// WRITTEN BY TRUMAN HEBERLE
-var COLOR = "#00EE00" 
-var MESSAGE = document.getElementById("title-desktop").textContent;
-
-var FONT_SIZE = 100;
-var AMOUNT = 2000;
-var SIZE = 2;
-var INITIAL_DISPLACEMENT = 500;
-var INITIAL_VELOCITY = 5;
-var VELOCITY_RETENTION = 0.95;
-var SETTLE_SPEED = 1;
-var FLEE_SPEED = 1;
-var FLEE_DISTANCE = 50;
-var FLEE = true;
-var SCATTER_VELOCITY = 3;
-var SCATTER = true;
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  // Mobile
-  MESSAGE = document.getElementById("title-mobile").textContent;
-  
-  FONT_SIZE = 50;
-  AMOUNT = 300;
-  SIZE = 2;
-  INITIAL_DISPLACEMENT = 100;
-  SETTLE_SPEED = 1;
-  FLEE = false;
-  SCATTER_VELOCITY = 2;
-}
-
-const canvas = document.getElementById("spring-text");
-const ctx = canvas.getContext("2d");
-
-var POINTS = [];
-var MOUSE = {
-  x: 0,
-  y: 0
-}
-
-function Point(x,y,r,g,b,a) {
-  var angle = Math.random() * 6.28;
-  this.dest_x = x;
-  this.dest_y = y;
-  this.original_r = r;
-  this.original_g = g;
-  this.original_a = a;
-  this.x = canvas.width/2 - x + (Math.random() - 0.5) * INITIAL_DISPLACEMENT;
-  this.y = canvas.height/2 - y + (Math.random() - 0.5) * INITIAL_DISPLACEMENT;
-  this.velx = INITIAL_VELOCITY * Math.cos(angle);
-  this.vely = INITIAL_VELOCITY * Math.sin(angle);
-  this.target_x = canvas.width/2 - x;
-  this.target_y = canvas.height/2 - y;
-  this.r = r;
-  this.g = g;
-  this.b = b;
-  this.a = a;
-  
-  this.getX = function() {
-    return this.x;
-  }
-  
-  this.getY = function() {
-    return this.y;
-  }
-  
-  this.resetTarget = function () {
-    this.target_x = canvas.width/2 - this.dest_x;
-    this.target_y = canvas.height/2 - this.dest_y;
-  }
-  
-  this.fleeFrom = function(x, y) {
-    this.velx -= ((MOUSE.x - this.x) * FLEE_SPEED / 10);
-    this.vely -= ((MOUSE.y - this.y) * FLEE_SPEED / 10);
-  }
-  
-  this.settleTo = function(x, y) {
-    this.velx += ((this.target_x - this.x) * SETTLE_SPEED / 100);
-    this.vely += ((this.target_y - this.y) * SETTLE_SPEED / 100);
-    this.velx -= this.velx * (1-VELOCITY_RETENTION);
-    this.vely -= this.vely * (1-VELOCITY_RETENTION);
-  }
-  
-  this.scatter = function() {
-    var unit = this.unitVecToMouse();
-    var vel = SCATTER_VELOCITY * 10 * (0.5 + Math.random() / 2);
-    this.velx = -unit.x * vel;
-    this.vely = -unit.y * vel;
-  }
-  
-  this.move = function() {
-    if (this.distanceToMouse() <= FLEE_DISTANCE) {
-      this.fleeFrom(MOUSE.x, MOUSE.y);
-    }
-    else {
-      this.settleTo(this.target_x, this.target_y);
-    }
-    
-    if (this.x + this.velx < 0 || this.x + this.velx >= canvas.width) {
-      this.velx *= -1;
-    }
-    if (this.y + this.vely < 0 || this.y + this.vely >= canvas.height) {
-      this.vely *= -1;
-    }
-    
-    this.x += this.velx;
-    this.y += this.vely;
-  }
-  
-  this.distanceToTarget = function() {
-    return this.distanceTo(this.target_x, this.target_y);
-  }
-  
-  this.distanceToMouse = function() {
-    return this.distanceTo(MOUSE.x, MOUSE.y);
-  }
-  
-  this.distanceTo = function(x, y) {
-    return Math.sqrt((x - this.x)*(x - this.x) + (y - this.y)*(y - this.y));
-  }
-  
-  this.unitVecToTarget = function() {
-    return this.unitVecTo(this.target_x, this.target_y);
-  }
-  
-  this.unitVecToMouse = function() {
-    return this.unitVecTo(MOUSE.x, MOUSE.y);
-  }
-  
-  this.unitVecTo = function(x, y) {
-    var dx = x - this.x;
-    var dy = y - this.y;
-    return {
-      x: dx / Math.sqrt(dx*dx + dy*dy),
-      y: dy / Math.sqrt(dx*dx + dy*dy)
-    };
-  }
-}
-
-window.addEventListener("resize", function() {
-  resizeCanvas()
-  adjustText()
-});
-
-if (FLEE) {
-  window.addEventListener("mousemove", function(event) {
-    MOUSE.x = event.clientX;
-    MOUSE.y = event.clientY;
-  });
-}
-
-if (SCATTER) {
-  window.addEventListener("click", function(event) {
-    MOUSE.x = event.clientX;
-    MOUSE.y = event.clientY;
-    for (var i=0; i<POINTS.length; i++) {
-      POINTS[i].scatter();
-    }
-  });
-}
-
-function resizeCanvas() {
-  canvas.width  = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-function adjustText() {
-  ctx.fillStyle = COLOR;
-  ctx.textBaseline = "middle";
-  ctx.textAlign = "center";
-  ctx.font = FONT_SIZE + "px Arial";
-  ctx.fillText(MESSAGE, canvas.width/2, canvas.height/2);
-  var textWidth = ctx.measureText(MESSAGE).width;
-  if (textWidth == 0) {
-    return;
-  }
-  var minX = canvas.width/2 - textWidth/2;
-  var minY = canvas.height/2 - FONT_SIZE/2;
-  var data = ctx.getImageData(minX, minY, textWidth, FONT_SIZE).data;
-  var isBlank = true;
-  for (var i=0; i<data.length; i++) {
-    if (data[i] != 0) {
-      isBlank = false;
-      break;
-    }
-  }
-  
-  if (!isBlank) {
-    var count = 0;
-    var curr = 0;
-    var num = 0;
-    var x = 0;
-    var y = 0;
-    var w = Math.floor(textWidth);
-    POINTS = [];
-    while (count < AMOUNT) {
-      while (curr == 0) {
-        num = Math.floor(Math.random() * data.length);
-        curr = data[num];
-      }
-      num = Math.floor(num / 4);
-      x = w/2 - num%w;
-      y = FONT_SIZE/2 - Math.floor(num/w);
-      POINTS.push(new Point(x,y,data[num*4],data[num*4 + 1],data[num*4 + 2],data[num*4 + 3]));
-      curr = 0;
-      count++;
-    }
-  }
-}
-
-function init() {
-  resizeCanvas()
-  adjustText()
-  window.requestAnimationFrame(animate);
-}
-
-function animate() {
-  update();
-  draw();
-}
-
-function update() {
-  var point;
-  for (var i=0; i<POINTS.length; i++) {
-    point = POINTS[i];
-    point.move();
-  }
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  var point;
-  for (var i=0; i<POINTS.length; i++) {
-    point = POINTS[i];
-    ctx.fillStyle = "rgba("+point.r+","+point.g+","+point.b+","+point.a+")";
-    ctx.beginPath();
-    ctx.arc(point.getX(),point.getY(),SIZE,0,2*Math.PI);
-    ctx.fill();
-  }
-  
-  window.requestAnimationFrame(animate);
-}
-
-init();
-</script>
-			<div class="arrow__btn">
-				<a href="#main" class="btn">
-					<img src="" alt="" width="50" height="50">
-				</a>
-			</div>
-	</header>
-</div>
-<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
-<script src="dest/main.js"></script>
-<script src="dest/circleMagic.min.js"></script>
-<script>
-		$('.header').circleMagic({
-			elem: '.header',
-			radius: 35,
-			densety: .3,
-			color: 'rgba(255,255,255, .4)',
-			//color: 'random',
-			clearOffset: .3
-		});
+   <head>
+      <meta charset="utf-8">
+      <title>LOVE 高瑞东 & 郑华</title>
+	<meta name="keywords" content="表白网页,我要表白网,表白网址" /> 
+<meta name="description" content="我爱你" /> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/base.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/main.css" rel="stylesheet" type="text/css" media="all"/>
+      <link href="css/venobox.css" rel="stylesheet" type="text/css"  media="all" />
+      <link href="css/fonts.css" rel="stylesheet" type="text/css"  media="all" />
+      <link href="css/ae168344b8194b348b667f19ac4d1956.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="loader">
+         <div class="loader-inner">
+            <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <circle class="spinner" cx="50" cy="50" r="21" fill="#ffffff" stroke-width="2"/>
+            </svg>
+         </div>
+      </div>
+      <div class="wrapper">
+         <section class="hero overlay">
+            <div class="background-img">
+               <img src="picture/xiaoyuan.jpg" alt="">
+            </div>
+            <header class="header default">
+               <div class=" left-part">
+                  <a class="logo scroll" href="#hero">
+                     <h2>LOVE 高瑞东 & 郑华</h2>
+                  </a>
+               </div>
+               <div class="right-part">
+                  <nav class="main-nav">
+                     <div class="toggle-mobile-but">
+                        <a href="#" class="mobile-but" >
+                           <div class="lines"></div>
+                        </a>
+                     </div>
+                     <ul>
+                        <li><a class="scroll" href="#home">爱的首页</a></li>
+                        <li><a class="scroll" href="#story">爱的故事</a></li>
+                        <li><a class="scroll" href="#album">爱的相册</a></li>
+                     </ul>
+                  </nav>
+               </div>
+            </header>
+            <div class="inner-hero">
+               <div class="container hero-content">
+                  <div class="row">
+                     <div class="col-sm-12 text-center">
+                        <h1 class="large mb-20">i love you</h1>
+                        <div class="block-date-hero">
+                           <div class="circle-dashed bg-n">
+                              <div class="round-circle">
+                                 <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg"  class="dashed-border">
+                                    <circle cx="50%" cy="50%" r="50" />
+                                 </svg>
+                                 <i class="icon-heart"></i>
+                              </div>
+                           </div>
+                           <ul>
+                              <li>高瑞东</li>
+                              <li>郑华</li>
+                           </ul>
+                        </div>
+                        <p class="mt-20 lead"></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="story" class="story pt-120 pb-120">
+            <svg class="section-dashed" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="578px" xml:space="preserve">
+               <path class="dashed-line" stroke-width="1"  d="M30 0 v600 400"/>
+            </svg>
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 text-center mb-100">
+				  
+                     <h1 class="title">Our love story</h1>
+                     <p>The Story of our love</p>
+                  </div>
+				    <div class="background-img">
+               <img src="picture/1.jpeg" alt="">
+            </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2 text-center mb-30">
+                  	<!--<img src="/03/images/111.gif"> -->
+                     <h2 class="heavy">这就是我们的爱情故事<br><span>同一个愿望,相爱.我爱你,至死不渝</span></h2>
+                  </div>
+               </div>
+               <div class="row story-row mt-100 mb-100">
+                  <div class="circle-dashed timeline bg">
+                     <div class="round-circle bg before">
+                        <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" class="dashed-border">
+                           <circle cx="50%" cy="50%" r="50"/>
+                        </svg>
+                        <i class="icon-heart"></i>
+                     </div>
+                  </div>
+                  <div class="col-sm-5 ">
+                     <div class="couple-story text-right">
+                        <p>2020年5月20日在人类纪元只会出现一次，不负遇见，郑华我爱你</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-2">
+                     <div class="couple-story">
+                        <p>莎士比亚说过：爱情是一种甜蜜的痛苦，但是我愿意忍受这种痛苦，莎士比亚还说过，世界上没有比服侍爱情更快乐的了，你愿不愿意享受这种快乐？当然你是愿意的~嘿嘿</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row story-row mt-100 mb-80 ">
+                  <div class="circle-dashed timeline bg green">
+                     <div class="round-circle  green before">
+                        <svg viewBox="0 0 103 103" version="1.1" xmlns="http://www.w3.org/2000/svg" class="dashed-border">
+                           <circle cx="50%" cy="50%" r="50"/>
+                        </svg>
+                        <i class="icon-heart"></i>
+                     </div>
+                  </div>
+                  <div class="col-sm-5 ">
+                     <div class="couple-story text-right">
+                        <p>从你的全世界路过，才发现你就是我的全世界</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-5 col-sm-offset-2">
+                     <div class="couple-story">
+                        <p>有一种爱的感觉，叫感同身受。有一种爱的默契，叫心有灵犀。有一种爱的承诺，叫天长地久</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12  text-center mt-100">
+                     <a href="#" class="but">
+                        <span>집</span>
+                        <svg class="but-svg" width="175" height="50" viewBox="0 0 415 120" xmlns="http://www.w3.org/2000/svg">
+                           <rect class="but-rect" x="10" y="10" width="400" height="100" rx="6" ry="6"/>
+                        </svg>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="date pt-150 pb-150 overlay">
+            <div class="background-img">
+               <img src="picture/4.jpg" alt="">
+            </div>
+            <div class="container">
+               <div class="row">
+                     <h2 class="indent">Wedding date</h2>
+                  <div class="col-sm-12 text-center">
+                     <div class="block-content front-p">
+                        
+                        <h2 class="typo">연애 타 이 머</h2>
+                        <span id="elapseClock" class="text-white" style="font-size: 45px;font-weight: 300;">days <span class="digit">20</span> hours <span class="digit">14</span> minutes <span class="digit">00</span> seconds</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="album" class="album bg-grey pt-120 pb-120">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 text-center mb-100">
+                     <h1 class="title">爱的相册</h1>
+                     <p>사랑 의 앨범</p>
+                  </div>
+               </div>
+               <div class="row mb-30">
+                     <h2 class="indent">Photo album</h2>
+                  <div class="col-md-4 col-sm-4 col-xs-12 " >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490542579422.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490542579422.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 " >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490542731052.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490542731052.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 " >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490543096270.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490543096270.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12" >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490543257636.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490543257636.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 " >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490543485467.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490543485467.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 " >
+                     <div class="block-img">
+                        <a href="http://img.zxgnz.com/images/20190804/156490543662231.jpg" class="venobox">
+                           <div class="background-img">
+                              <img alt="" src="picture/156490543662231.jpg">
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="just-married pt-200 pb-200 overlay">
+            <div class="background-img">
+               <img src="picture/17.jpg" alt="">
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 text-center">
+                     <div class="block-content front-p">
+                        <h2 class="typo">❤</h2>
+                        <h2 class="heavy uppercase mt-10 light">执子之手,与子携老</h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <footer class="footer pt-70 pb-70">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12 text-center">
+                     <p class="uppercase heavy normal">&copy; 202005201314 love 高瑞东 & 郑华</p>
+                  </div>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <script src="js/jquery-1.12.4.min.js" type="text/javascript"></script>
+      <script src="js/jquery.countdown.min.js" type="text/javascript"></script>
+      <script src="js/venobox.min.js" type="text/javascript"></script>
+      <script src="js/smooth-scroll.js" type="text/javascript"></script>
+      <script src="js/script.js" type="text/javascript"></script>
+<script type="text/javascript">
+			var together = new Date();
+		    var strs = "2020-04-26";
+            var nowTime=new Date();
+            var together = new Date(strs.replace(/-/g,"/"));	
+			timeElapse(together);
+			setInterval(function () {timeElapse(together);}, 500);
+			function timeElapse(c){
+			var e=Date();
+			var f=(Date.parse(e)-Date.parse(c))/1000;
+			var g=Math.floor(f/(3600*24));f=f%(3600*24);
+			var b=Math.floor(f/3600);
+			if(b<10){b="0"+b}f=f%3600;var d=Math.floor(f/60);
+			if(d<10){d="0"+d}f=f%60;
+			if(f<10){f="0"+f}
+			var a='<span class="digit">'+g+'</span> days <span class="digit">'+b+'</span> hours <span class="digit">'+d+'</span> minutes <span class="digit">'+f+"</span> seconds";$("#elapseClock").html(a)};
 </script>
 
-</body>
+
+<link rel="stylesheet" href="css/cuplayer.css">
+				 <div style="position:absolute; top:50px; right:50px;">
+		<audio id="main_audio" autoplay="autoplay" preload="auto" loop>
+            <source src="http://www.zaiyiqiba.com/mp3/kgmp3.php?id=de7a6d73d7caa0e8962fd29f4e2162ef" type="audio/mpeg" />
+        </audio>
+        <a class="c-white fs-12 icon-play rotate" id="btn-play" href="javascript:void(0);"></a>
+    </div>
+	 <script type="text/javascript">
+    //获取picid函数
+    $(function(){
+        $("area").click(function(){
+           var  picId=$(this).attr("data-id");
+           var picSrc="images/img_big/"+picId+".jpg"
+            $(".modal-content>.pic-box>img").attr("src",picSrc);
+        })
+        var isPlaying = function(audio) {return !audio.paused;}
+        var a = document.getElementById('main_audio');
+        $('#btn-play').on('click', function() {
+            if($(this).hasClass('rotate')) {
+                a.pause();
+                $(this).removeClass('rotate');
+            } else {
+                a.play();
+                $(this).addClass('rotate');
+            }
+        });
+
+    })
+    </script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script>
+    function autoPlayAudio1() {
+        wx.config({
+            // 配置信息, 即使不正确也能使用 wx.ready
+            debug: false,
+            appId: '',
+            timestamp: 1,
+            nonceStr: '',
+            signature: '',
+            jsApiList: []
+        });
+        wx.ready(function() {
+            document.getElementById('main_audio').play();
+        });
+    }
+    autoPlayAudio1(); // 推荐使用方法1
+    </script>
+	<bgsound src="http://www.51bbw.cn/mp3/1youdiantian.mp3" loop="-1"/>
+<audio src="http://www.51bbw.cn/mp3/1youdiantian.mp3" controls autoplay='autoplay' loop="loop" id="bgmusic" style="display:none"></audio>
+ <script>
+    (function() {
+        function log(info) {
+            console.log(info);
+            // alert(info);
+        }
+        function forceSafariPlayAudio() {
+            audioEl.load(); // iOS 9   还需要额外的 load 一下, 否则直接 play 无效
+            audioEl.play(); // iOS 7/8 仅需要 play 一下
+        }
+
+        var audioEl = document.getElementById('bgmusic');
+
+        audioEl.addEventListener('loadstart', function() {
+            log('loadstart');
+        }, false);
+        audioEl.addEventListener('loadeddata', function() {
+            log('loadeddata');
+        }, false);
+        audioEl.addEventListener('loadedmetadata', function() {
+            log('loadedmetadata');
+        }, false);
+        audioEl.addEventListener('canplay', function() {
+            log('canplay');
+        }, false);
+        audioEl.addEventListener('play', function() {
+            log('play');
+            // 当 audio 能够播放后, 移除这个事件
+            window.removeEventListener('touchstart', forceSafariPlayAudio, false);
+        }, false);
+        audioEl.addEventListener('playing', function() {
+            log('playing');
+        }, false);
+        audioEl.addEventListener('pause', function() {
+            log('pause');
+        }, false);
+
+        // 由于 iOS Safari 限制不允许 audio autoplay, 必须用户主动交互(例如 click)后才能播放 audio,
+        // 因此我们通过一个用户交互事件来主动 play 一下 audio.
+        window.addEventListener('touchstart', forceSafariPlayAudio, false);
+
+        audioEl.src = "http://www.51bbw.cn/mp3/1youdiantian.mp3";
+    })();
+    </script>
+	
+   </body>
 </html>
+
